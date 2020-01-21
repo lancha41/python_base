@@ -1,0 +1,30 @@
+num1=int(input('Введите первое число: '))
+num2=int(input('Введите второе число: '))
+
+a = num1 + num2
+b1 = num1 - num2
+b2 = num2 - num1
+c = num1*num2
+s1=num1**num2
+s2=num2**num1
+log_and = num1 and num2
+log_or = num1 or num2
+bit_and = num1 & num2
+bit_or = num1 | num2
+bit_or_exclude = num1 ^ num2
+print('Сумма',num1, '+', num2, '=', a)
+print('Разница',num1, '-',num2, '=',b1)
+print('Разница',num2,'-',num1, '=',b2)
+print('Умножение =',c)
+print('Остаток от деления =',num1//num2)
+print(' =',num1%num2)
+
+print('Деление =',num1/num2)
+print('Степень', num1, 'в', num2, '=', s1)
+print('Степень', num2, 'в', num1, '=', s2)
+print('Логическое и', num1, 'над', num2, '=', log_and)
+print('Логическое или', num1, 'над', num2, '=', log_or)
+print('Побитовое и', num1, 'над', num2, '=', bit_and)
+print('Побитовое или', num1, 'над', num2, '=', bit_or)
+print('Побитовое или', num1, 'над', num2, '=', bit_or)
+print('Побитовое исключающее или', num1, 'над', num2, '=', bit_or_exclude)
