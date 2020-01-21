@@ -1,11 +1,11 @@
 a=input('Введите коф a= ')
-while a.isalpha() or type(int(a))!=int:
+while a.isalpha() or type(float(a))!=float:
         a=input('Поддерживаються только целые числа!\nВведите еще раз а= ')
 b=input('Введите коф b= ')
-while b.isalpha() or type(int(b))!=int:
+while b.isalpha() or type(float(b))!=float:
         b=input('Поддерживаються только целые числа!\nВведите еще раз b= ')
 c=input('Введите коф c= ')
-while c.isalpha() or type(int(c))!=int:
+while c.isalpha() or type(float(c))!=float:
         c=input('Поддерживаються только целые числа!\nВведите еще раз c= ')
 a=float(a)
 b=float(b)
