@@ -1,4 +1,3 @@
-heelooooooo
 print('Today is 10.01.2020')
 name_surname = input('Please, write your name and surname: ')
 print('='*20)
