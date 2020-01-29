@@ -7,23 +7,36 @@ def us_print():
 		b=input('Допустимы только натуральные числа!\nВведите число еще раз: ')
 	sum_of_natural_numbers(a,b)
 def sum_of_natural_numbers(a,b):
-	sum=0
-	a=int(a)
-	b=int(b)
-	if a <= b:
-		for i in range(a,b+1):
-			sum+=i
-		print('Сумма натуральных чисел от', a,'до', b, 'равна', sum)
-		answer()
-	else:
-		for i in range(b,a+1):
-			sum+=i
-		print('Сумма натуральных чисел от', b,'до', a, 'равна', sum)
-		answer()
+    a = int(a)
+    b = int(b)
+    sum = 0
+    if a<=0 and b<=0:
+        print('Сумма натуральных чисел в отрезке от', b, 'до', a, 'равна 0')
+        answer()
+    elif a <= 0 and b >= 0:
+        for i in range(1,b+1):
+            sum+=i
+        print('Сумма натуральных чисел от', a,'до', b, 'равна', sum)
+        answer()
+    elif a >= 0 and b <= 0:
+        for i in range(1,a+1):
+            sum+=i
+        print('Сумма натуральных чисел от', b,'до', a, 'равна', sum)
+        answer()
+    elif a>=b and (a>=0 and b>=0):
+        for i in range(b,a+1):
+            sum+=i
+        print('Сумма натуральных чисел от', b,'до', a, 'равна', sum)
+        answer()
+    elif a<=b and (a>=0 and b>=0):
+        for i in range(a,b+1):
+            sum+=i
+        print('Сумма натуральных чисел от', a,'до', b, 'равна', sum)
+        answer()
 def answer():
-	ans=input('Повторить заново (y/Y/Д/д) или выйти (n/N/Н/н) из программы? ')
-	if ans == 'y' or ans == 'Y' or ans == 'Д' or ans == 'д':
-		us_print()
-	elif ans == 'n'or ans == 'N' or ans == 'Н' or ans == 'н':
-		exit(0)
+    ans=input('Повторить заново (y/Y/Д/д) или выйти (n/N/Н/н) из программы? ')
+    if ans == 'y' or ans == 'Y' or ans == 'Д' or ans == 'д':
+        us_print()
+    elif ans == 'n'or ans == 'N' or ans == 'Н' or ans == 'н':
+        exit(0)
 us_print()
