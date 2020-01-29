@@ -1,10 +1,6 @@
 def us_print():
 	a=input('Введите первое число: ')
-	while (not a.isdigit()) or (not int(a)>=1) :
-		a=input('Допустимы только натуральные числа!\nВведите число еще раз: ')
 	b=input('Введите второе число: ')
-	while not b.isdigit() or int(b)<=0:
-		b=input('Допустимы только натуральные числа!\nВведите число еще раз: ')
 	sum_of_natural_numbers(a,b)
 def sum_of_natural_numbers(a,b):
     a = int(a)
