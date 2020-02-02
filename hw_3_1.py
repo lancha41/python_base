@@ -1,15 +1,18 @@
 punctuation = '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~'
-enter_string = ''
+enter_string = list()
 while True:
     text = input('Enter text:')
-    enter_string += text.lower()
+    enter_string += text.split()
     if text == '':
         break
-str_without_punctuation = enter_string.translate(str.maketrans(punctuation,' '*len(punctuation)))
+str_without_punctuation = ' '.join(enter_string).translate(str.maketrans(punctuation,' '*len(punctuation)))
 list_words = str_without_punctuation.split()
+max_word = 0
 print("Статистика слов:")
 words_dict = dict()
 for word in list_words:
+    if len(word) > max_word:
+        max_word = len(word)
     words_dict[word] = list_words.count(word)
 for key,value in words_dict.items():
-    print('| {:<15} |  {} |'.format(key,value))
+    print('| {} |  {} |'.format(key.ljust(max_word, ' '),value))
